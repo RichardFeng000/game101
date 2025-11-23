@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g3",
+                "-I/opt/homebrew/include",
+                "${file}",
+                "-o",
+                "${fileDirname}/output/main"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "options": {
+                "cwd": "${fileDirname}"
+            }
+        }
+    ]
+}
