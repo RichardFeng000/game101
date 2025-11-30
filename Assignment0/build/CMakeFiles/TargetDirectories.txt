@@ -1,0 +1,3 @@
+/Users/fengruiding/Library/Mobile Documents/com~apple~CloudDocs/GAMES101 hw/Assignment0/build/CMakeFiles/Transformation.dir
+/Users/fengruiding/Library/Mobile Documents/com~apple~CloudDocs/GAMES101 hw/Assignment0/build/CMakeFiles/edit_cache.dir
+/Users/fengruiding/Library/Mobile Documents/com~apple~CloudDocs/GAMES101 hw/Assignment0/build/CMakeFiles/rebuild_cache.dir

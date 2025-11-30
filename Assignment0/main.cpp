@@ -1,7 +1,7 @@
-#include<cmath>
-#include<eigen3/Eigen/Core>
-#include<eigen3/Eigen/Dense>
-#include<iostream>
+#include <cmath>
+#include <Eigen/Core>
+#include <Eigen/Dense>
+#include <iostream>
 
 int main(){
 
@@ -43,6 +43,23 @@ int main(){
     // matrix scalar multiply i * 2.0
     // matrix multiply i * j
     // matrix multiply vector i * v
+
+    
+    // ----- Homework: transform point P -----
+    Eigen::Vector3f p(2.0f, 1.0f, 1.0f); // homogeneous point (x, y, 1)
+    float angle_rad = 45.0f * static_cast<float>(M_PI) / 180.0f;
+
+    Eigen::Matrix3f rotation;
+    rotation << std::cos(angle_rad), -std::sin(angle_rad), 0.0f,
+                std::sin(angle_rad),  std::cos(angle_rad), 0.0f,
+                0.0f,                 0.0f,                1.0f;
+
+    Eigen::Matrix3f translation = Eigen::Matrix3f::Identity();
+    translation(0, 2) = 1.0f;
+    translation(1, 2) = 2.0f;
+
+    Eigen::Vector3f p_transformed = translation * rotation * p;
+    std::cout << "Transformed point (x, y):\n" << p_transformed.head<2>() << std::endl;
 
     return 0;
 }
